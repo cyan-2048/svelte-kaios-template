@@ -8,18 +8,16 @@ const app = new App({
 });
 
 function test() {
-	return new Promise((res, err) => {
-		setTimeout(() => res("hewo"), 2000);
-	});
+	return new Promise((res) => setTimeout(res, 2000, "hewo"));
 }
 
 async function testTimeout() {
-	let data = await test();
+	const data = await test();
 	return data;
 }
 
 async function finalTest() {
-	let test = await testTimeout();
+	const test = await testTimeout();
 	console.log(test);
 }
 
