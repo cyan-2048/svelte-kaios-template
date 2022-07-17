@@ -1,4 +1,5 @@
 <script>
+	import "./assets/global.css"; // importing it will make terser be able to minify it
 	export let name = "cyan";
 </script>
 
